@@ -17,6 +17,8 @@ jobs:
   config-files-deployment:
     runs-on: self-hosted
     steps:
+      - name: Print User
+        run: echo "$USER"
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Grant exeution privileges
