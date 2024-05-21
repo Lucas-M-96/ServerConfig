@@ -1,0 +1,12 @@
+# file purpose: fichier systemd qui fait de l'exécution de wsgi.py par gunicorn un service, que l'on peut lancer via une commande systemctl
+# path on server: cat /etc/systemd/system/app_departements.service
+
+After=network.target
+[Service]
+User=lucasm96
+Group=www-data
+WorkingDirectory=/home/lucasm96/app_departements/code_source
+Environment="PATH=/home/lucasm96/app_departements/departements_venv/bin"
+ExecStart=/home/lucasm96/app_departements/departements_venv/bin/gunicorn --bind 0.0.0.0:5001 wsgi:app
+[Install]
+WantedBy=multi-user.target
