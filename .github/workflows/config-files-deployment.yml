@@ -17,14 +17,10 @@ jobs:
   config-files-deployment:
     runs-on: self-hosted
     steps:
-      - name: List files in the repository before checkout
-        run: |
-          ls ${{ github.workspace }}
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: List files in the repository after checkout
-        run: |
-          ls -al
+      - name: Grant exeution privileges
+        run: chmod +x nginx/nginx-config-script.sh
       - name: Run deployment script
         run: ./nginx/nginx-config-script.sh
       - run: |
