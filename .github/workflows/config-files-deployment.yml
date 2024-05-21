@@ -22,7 +22,7 @@ jobs:
       - name: Grant exeution privileges
         run: chmod +x nginx/nginx-config-script.sh
       - name: Run deployment script
-        run: ./nginx/nginx-config-script.sh
+        run: sudo ./nginx/nginx-config-script.sh
       - run: |
           echo "Config Completed"
         
