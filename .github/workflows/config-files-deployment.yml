@@ -19,12 +19,14 @@ jobs:
     steps:
       - name: Print User
         run: echo "$USER"
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Grant exeution privileges
-        run: chmod +x nginx/nginx-config-script.sh
-      - name: Run deployment script
-        run: sudo ./nginx/nginx-config-script.sh
-      - run: |
-          echo "Config Completed"
+      - name: Execute whoami
+        run: whoami
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
+      # - name: Grant exeution privileges
+      #   run: chmod +x nginx/nginx-config-script.sh
+      # - name: Run deployment script
+      #   run: sudo ./nginx/nginx-config-script.sh
+      # - run: |
+      #     echo "Config Completed"
         
