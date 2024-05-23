@@ -13,12 +13,12 @@ else
     echo "NGINX Configuration file doesn't exist, creating file..."
 fi
 
-cp "$source_path" > "$available_path"
+cp "$source_path" "$available_path"
 
-chcon unconfined_u:object_r:httpd_config_t:s0 "$available_path"
-chown root:root "$available_path"
+# chcon unconfined_u:object_r:httpd_config_t:s0 "$available_path"
+# chown root:root "$available_path"
 
 ln -s "$available_path" "$enabled_path"
 
-nginx -t
-systemctl reload nginx
+sudo nginx -t
+sudo systemctl reload nginx
