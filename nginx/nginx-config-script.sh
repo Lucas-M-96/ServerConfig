@@ -1,7 +1,7 @@
 #!/bin/bash
 file_name="all_apps_https"
 
-source_path="~/actions-runner/_work/ServerConfig/ServerConfig/nginx/sites-available/${file_name}"
+source_path="${HOME}/actions-runner/_work/ServerConfig/ServerConfig/nginx/sites-available/${file_name}"
 available_path="/etc/nginx/sites-available/${file_name}"
 enabled_path="/etc/nginx/sites-enabled/${file_name}"
 
