@@ -17,12 +17,12 @@ jobs:
   config-files-deployment:
     runs-on: self-hosted
     steps:
-      - name: Print User test
-        run: echo "$USER"
-      - name: Execute whoami test
-        run: whoami
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
+      # - name: Print User test
+      #   run: echo "$USER"
+      # - name: Execute whoami test
+      #   run: whoami
+      - name: Checkout code
+        uses: actions/checkout@v4
       # - name: Grant exeution privileges
       #   run: chmod +x nginx/nginx-config-script.sh
       # - name: Run deployment script
